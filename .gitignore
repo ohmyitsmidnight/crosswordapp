@@ -1,0 +1,46 @@
+# Dependency directories
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing files
+/coverage
+
+# Build directories
+/build
+/dist
+/.next
+/.nuxt
+/out
+/.idea
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.user
+*.suo
+*.bak
+*.cache
+*.log
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Dependency directory
+**/node_modules
+
+# End of file
+#
