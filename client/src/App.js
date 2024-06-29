@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
+import axios from 'axios';
 
 function App() {
   const [word, setWord] = useState('');
   const [definition, setDefinition] = useState('');
 
   const fetchDefinition = async () => {
-    const response = await axios.get(`https://crosswordapp.onrender.com/api/define`, { params: { word } });
+    const response = await axios.get(`/api/define`, { params: { word } });
     setDefinition(response.data.definition);
   };
 
