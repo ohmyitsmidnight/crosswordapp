@@ -7,7 +7,7 @@ function App() {
   const [definition, setDefinition] = useState('');
 
   const fetchDefinition = async () => {
-    const response = await axios.get(`https://crosswordapp.onrender.com/api/define`, { params: { word } });
+    const response = await axios.get(`/api/define`, { params: { word } });
     setDefinition(response.data.definition);
   };
 
@@ -20,10 +20,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <form onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            value={word} 
-            onChange={(e) => setWord(e.target.value)} 
+          <input
+            type="text"
+            value={word}
+            onChange={(e) => setWord(e.target.value)}
             placeholder="Enter a word"
           />
           <button type="submit">Get Definition</button>

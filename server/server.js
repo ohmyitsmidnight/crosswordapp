@@ -1,7 +1,10 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const app = express();
 const PORT = 5000;
+
+app.use(cors());
 
 // Define route
 app.get('/api/define', async (req, res) => {
@@ -17,6 +20,7 @@ app.get('/api/define', async (req, res) => {
 
 // Serve static files from React app
 app.use(express.static('../client/build'));
+
 
 // Serve React app
 app.get('*', (req, res) => {
