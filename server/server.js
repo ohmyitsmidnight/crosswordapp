@@ -19,12 +19,11 @@ app.get('/api/define', async (req, res) => {
 });
 
 // Serve static files from React app
-app.use(express.static('../client/build'));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
-
-// Serve React app
+// Serve React app for all other routes
 app.get('*', (req, res) => {
-  res.sendFile('index.html', { root: '../client/build' });
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 app.listen(PORT, () => {
