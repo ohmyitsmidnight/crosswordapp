@@ -19,12 +19,12 @@ app.get('/api/define', async (req, res) => {
 });
 
 // Serve static files from React app
-app.use(express.static('../client/build'));
+app.use(express.static('https://crosswordapp-client.onrender.com/'));
 
 
 // Serve React app
 app.get('*', (req, res) => {
-  res.sendFile('index.html', { root: '../client/build' });
+  res.sendFile('index.html', { root: '.https://crosswordapp-client.onrender.com' });
 });
 
 app.listen(PORT, () => {
