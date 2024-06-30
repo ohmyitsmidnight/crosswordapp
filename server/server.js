@@ -3,8 +3,13 @@ const axios = require('axios');
 const cors = require('cors');
 const app = express();
 const PORT = 5000;
+const corsOptions = {
+  origin: 'https://crosswordapp-client.onrender.com',
+  optionsSuccessStatus: 200
+};
 
 app.use(cors());
+app.use(cors(corsOptions));
 
 // Define route
 app.get('/api/define', async (req, res) => {

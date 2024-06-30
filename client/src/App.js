@@ -7,7 +7,7 @@ function App() {
   const [definition, setDefinition] = useState('');
 
   const fetchDefinition = async () => {
-    const response = await axios.get(`https://crosswordapp.onrender.com`, { params: { word } });
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/define`, { params: { word } });
     setDefinition(response.data.definition);
   };
 
