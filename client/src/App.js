@@ -19,15 +19,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={word}
-            onChange={(e) => setWord(e.target.value)}
-            placeholder="Enter a word"
-          />
-          <button type="submit">Get Definition</button>
-        </form>
+        <div>
+        
+        </div>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={word}
+              onChange={(e) => setWord(e.target.value)}
+              placeholder="Enter a word"
+            />
+            <button type="submit">Get Definition</button>
+          </form>
+        </div>
         <p>{definition}</p>
       </header>
     </div>
